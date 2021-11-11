@@ -21,14 +21,24 @@
                 Persone:<span id="numero-persone"> 2 </span>
                 <a href="#" id="sub" class="btn">-</a>
                 <a href="#" id="add" class="btn">+</a>
+            </div>
+            <div>
+                Tavolo selezionato:<span id="tavolo-selezionato">-</span>
+            </div>
         </section>
-        </div>
-        </div>
-        Tavolo selezionato:<span id="tavolo-selezionato">-</span>
-        </div>
+
         <section id="tavoli-w">
+            <!--<div class="tavolo x4 libero">1</div>
+            <div class="tavolo x4 libero">2</div>
+            <div class="tavolo x6 occupato">3</div>
+            <div class="tavolo x6 libero">4</div>
+            <div class="tavolo x6 libero">5</div>
+            <div class="tavolo x4 libero">6</div>
+            <div class="tavolo x4 occupato">7</div>
+            <div class="tavolo x6 libero">8</div>
+        </section> -->
         </section>
-        <p id="message-status"></p>
+
         <form action="">
             <div class="form-items">
                 <input type="text" name="nome" class="input" placeholder="Nome" required>
@@ -36,15 +46,17 @@
             <div class="form-items">
                 <input type="text" name="email" class="input" placeholder="Email" required>
             </div>
-
             <div class="form-items">
-                <input type="submit" name="prenota" class="btn-prenota" value="prenota">
+                <input type="submit" name="prenota" class="btn-prenota" value="PRENOTA">
             </div>
         </form>
+        <p id="message-status"></p>
     </main>
+
     <footer>
 
     </footer>
+
     <script type="module" src="app.js"></script>
 </body>
 

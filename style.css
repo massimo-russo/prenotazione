@@ -17,8 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    background-color: var(--color-bg);
-    color: white;
+    background-color: cyan;
     font-size: var(--fontsize-base);
     font-family: 'Open Sans', sans-serif;
     padding: 0 30px;
@@ -36,8 +35,8 @@ a.hover {
 }
 
 header>h1 {
-    color: var(--color-green);
-    font-size: var(--fontsize-medium);
+    color: blue;
+    font-size: 30px;
     text-align: center;
     margin-bottom: var(--margin-small);
 }
@@ -58,7 +57,7 @@ header>h1 {
 
 section#info-w {
     display: flex;
-    background-color: yellow;
+    background-color: rgb(0, 255, 55);
     flex-direction: row;
     justify-content: space-around;
     border: 1px solid rgba(21, 6, 231, 0.2);
@@ -87,7 +86,7 @@ section#tavoli-w>div.tavolo.x6 {
 }
 
 section#tavoli-w>div.tavolo.libero {
-    background-color: green;
+    background-color: yellow;
 }
 
 section#tavoli-w>div.tavolo.libero:hover {
@@ -96,6 +95,10 @@ section#tavoli-w>div.tavolo.libero:hover {
 
 section#tavoli-w>div.tavolo.occupato {
     background-color: red;
+}
+
+section#tavoli-w>div.tavolo:not(.occupato):hover {
+    transform: scale(1.2);
 }
 
 form>div.form-items {
