@@ -68,7 +68,7 @@ section#info-w {
     justify-content: space-around;
     border: 1px solid rgba(21, 6, 231, 0.2);
     /*altezza e distanza caratteri*/
-    padding: 10px 60px;
+    padding: 10px 0px;
     margin-bottom: var(--margin-big);
 }
 
