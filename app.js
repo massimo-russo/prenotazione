@@ -44,9 +44,10 @@ Booking.numeroPersoneW.addEventListener('click', (e) => {
 Booking.tavoliW.addEventListener('click', (e) => {
     let selezionato = +e.target.textContent;
     if (Booking.tavoli[selezionato - 1].occupato) {
-        Booking.messageStatus.textContent = 'tavolo  occupato';
+        Booking.messageStatus.textContent = 'Tavolo occupato';
     } else {
         Booking.tavoloSelezionato.textContent = selezionato;
+        Booking.messageStatus.textContent = 'Tavolo libero prenota';
     }
 });
 
@@ -54,7 +55,7 @@ Booking.tavoliW.addEventListener('click', (e) => {
 document.forms[0].addEventListener('submit', (e) => {
     e.preventDefault();
     if (Booking.tavoloSelezionato.textContent == '-') {
-        Booking.messageStatus.textContent = 'tavolo  non selezionato ';
+        Booking.messageStatus.textContent = 'tavolo  non selezionato';
         return;
     }
     sendBooking();
@@ -69,5 +70,5 @@ function sendBooking() {
     bookingForm.append('nome', document.forms[0].nome.value);
     bookingForm.append('nome', document.forms[0].email.value);
     Booking.messageStatus.textContent = 'Prenotazione andata a buon fine';
-    document.forms[0].reset();
+    document.forms[0].reset(); /*reset form*/
 }

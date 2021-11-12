@@ -21,6 +21,12 @@ body {
     font-size: var(--fontsize-base);
     font-family: 'Open Sans', sans-serif;
     padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 700px;
+    background: #fff url('./images/sfondo.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 header,
@@ -35,7 +41,7 @@ a.hover {
 }
 
 header>h1 {
-    color: blue;
+    color: white;
     font-size: 30px;
     text-align: center;
     margin-bottom: var(--margin-small);
@@ -61,7 +67,8 @@ section#info-w {
     flex-direction: row;
     justify-content: space-around;
     border: 1px solid rgba(21, 6, 231, 0.2);
-    padding: 6px 0;
+    /*altezza e distanza caratteri*/
+    padding: 10px 5px;
     margin-bottom: var(--margin-big);
 }
 
@@ -71,6 +78,12 @@ section#tavoli-w {
     flex-basis: 100%;
     margin-top: 40px;
     justify-content: space-around;
+    border: 10px solid rgb(17, 20, 224);
+}
+
+section#tavoli-w>div.tavolo.libero {
+    background-color: yellow;
+    color: blue;
 }
 
 section#tavoli-w>div.tavolo {
@@ -78,6 +91,26 @@ section#tavoli-w>div.tavolo {
     text-align: center;
     margin: 10px;
     height: 60px;
+    line-height: 60px;
+    border-radius: 5%;
+}
+
+
+/*sezione info tavoli*/
+
+section#tavoli-info>div.libero {
+    background-color: yellow;
+    text-align: center;
+    height: 60%;
+    width: 60px;
+    line-height: 60px;
+}
+
+section#tavoli-info>div.occupato {
+    background-color: red;
+    text-align: center;
+    height: 60%;
+    width: 100px;
     line-height: 60px;
 }
 
@@ -102,5 +135,20 @@ section#tavoli-w>div.tavolo:not(.occupato):hover {
 }
 
 form>div.form-items {
+    /*distanza tra campi form*/
     margin: var(--margin-small) 0;
+}
+
+.btn-prenota {
+    background: rgb(30, 255, 0);
+    color: inherit;
+    padding: 4px 12px;
+    border: 1px solid var(--color-white);
+    transition: all .4s ease-in;
+}
+
+.btn-prenota:hover {
+    color: var(--color-green);
+    background-color: rgb(0, 81, 255);
+    border: 1px solid var(--color-green);
 }
